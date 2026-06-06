@@ -15,7 +15,7 @@
     body {
       background: #f3f1ec;
       font-family: Arial, Helvetica, sans-serif;
-      color: #111;
+      color: #4f4e4a;
       padding: 0 14px 28px;
     }
 
@@ -87,30 +87,30 @@
 
     .subtext {
       text-align: center;
-      font-size: 17px;
+      font-size: 16px;
       line-height: 1.45;
-      color: #5f5d58;
+      color: #4f4e4a;
       margin-bottom: 24px;
     }
 
     .step {
       display: flex;
-      gap: 18px;
+      gap: 16px;
       align-items: flex-start;
       background: #fffdf8;
       border: 1px solid #d8d4ca;
-      border-radius: 16px;
-      padding: 22px 20px;
-      margin-bottom: 18px;
+      border-radius: 12px;
+      padding: 18px 16px;
+      margin-bottom: 16px;
       width: 100%;
     }
 
-    .num {
-      min-width: 46px;
-      width: 46px;
-      height: 46px;
+    .icon {
+      min-width: 36px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      background: #62615d;
+      background: #5f5d58;
       color: #fff;
       display: flex;
       align-items: center;
@@ -120,36 +120,58 @@
       margin-top: 2px;
     }
 
+    .info-icon {
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-size: 22px;
+      font-weight: 700;
+      padding-right: 2px;
+    }
+
     .step-text {
       width: 100%;
     }
 
-    .step h3 {
-      font-size: 25px;
-      margin-bottom: 10px;
-      font-weight: 900;
-      line-height: 1.2;
+    .step h3,
+    .info-box h3 {
+      font-size: 20px;
+      margin-bottom: 7px;
+      font-weight: 800;
+      line-height: 1.25;
       color: #111;
     }
 
-    .step p {
-      font-size: 20px;
-      line-height: 1.35;
-      color: #5f5d58;
+    .step p,
+    .info-box p {
+      font-size: 16px;
+      line-height: 1.45;
+      color: #4f4e4a;
+    }
+
+    .info-box {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: #ebe6dc;
+      border: 1px solid #cec7ba;
+      border-radius: 12px;
+      padding: 18px 16px;
+      margin: 20px 0 26px;
+      width: 100%;
     }
 
     .cta {
       display: block;
       width: 100%;
       text-align: center;
-      background: #62615d;
+      background: #5f5d58;
       color: white;
       text-decoration: none;
-      padding: 24px 14px;
-      border-radius: 14px;
-      font-size: 24px;
-      font-weight: 900;
-      margin: 26px 0 18px;
+      padding: 20px 14px;
+      border-radius: 9px;
+      font-size: 21px;
+      font-weight: 800;
+      margin-top: 8px;
       box-shadow: 0 10px 22px rgba(80, 78, 70, 0.20);
       transition: background-color 0.18s ease, transform 0.18s ease;
       -webkit-tap-highlight-color: transparent;
@@ -166,18 +188,18 @@
       transform: scale(0.985);
     }
 
-    .under-cta {
+    .fine-print {
       text-align: center;
-      font-size: 18px;
-      line-height: 1.35;
-      color: #7b7770;
-      margin-bottom: 36px;
+      font-size: 14px;
+      color: #77736b;
+      margin: 16px 0 32px;
+      line-height: 1.4;
     }
 
     h2 {
-      font-size: 38px;
-      line-height: 1.15;
-      margin-bottom: 22px;
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 18px;
       font-weight: 900;
       color: #111;
     }
@@ -185,22 +207,22 @@
     details {
       background: #fffdf8;
       border: 1px solid #d8d4ca;
-      border-radius: 16px;
-      padding: 24px 20px;
-      margin-bottom: 16px;
+      border-radius: 10px;
+      padding: 18px 14px;
+      margin-bottom: 12px;
       width: 100%;
     }
 
     summary {
       list-style: none;
       cursor: pointer;
-      font-size: 24px;
-      font-weight: 900;
+      font-size: 20px;
+      font-weight: 800;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
-      line-height: 1.25;
+      gap: 10px;
+      line-height: 1.35;
       color: #111;
     }
 
@@ -210,10 +232,10 @@
 
     summary::after {
       content: "+";
-      font-size: 32px;
+      font-size: 26px;
       font-weight: 900;
       flex-shrink: 0;
-      color: #62615d;
+      color: #5f5d58;
     }
 
     details[open] summary::after {
@@ -223,17 +245,9 @@
 
     details p {
       margin-top: 18px;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1.45;
-      color: #5f5d58;
-    }
-
-    .fine-print {
-      text-align: center;
-      font-size: 17px;
-      color: #7b7770;
-      margin: 28px 0 4px;
-      line-height: 1.45;
+      color: #4f4e4a;
     }
 
     @media (max-width: 520px) {
@@ -248,6 +262,10 @@
         white-space: nowrap;
       }
 
+      h2 {
+        font-size: 26px;
+      }
+
       .container {
         padding: 22px 14px 28px;
       }
@@ -256,45 +274,21 @@
         font-size: 19px;
       }
 
-      .step {
-        padding: 20px 16px;
-        gap: 16px;
-      }
-
-      .num {
-        min-width: 42px;
-        width: 42px;
-        height: 42px;
-        font-size: 22px;
-      }
-
-      .step h3 {
-        font-size: 22px;
-      }
-
-      .step p {
+      .step h3,
+      .info-box h3,
+      summary {
         font-size: 18px;
       }
 
+      .step p,
+      .info-box p,
+      details p,
+      .subtext {
+        font-size: 15px;
+      }
+
       .cta {
-        font-size: 22px;
-        padding: 22px 12px;
-      }
-
-      .under-cta {
-        font-size: 17px;
-      }
-
-      h2 {
-        font-size: 34px;
-      }
-
-      summary {
-        font-size: 21px;
-      }
-
-      details p {
-        font-size: 17px;
+        font-size: 18px;
       }
     }
 
@@ -312,29 +306,15 @@
         padding-left: 12px;
         padding-right: 12px;
       }
-
-      .step h3 {
-        font-size: 20px;
-      }
-
-      .step p {
-        font-size: 17px;
-      }
-
-      .cta {
-        font-size: 20px;
-      }
-
-      summary {
-        font-size: 20px;
-      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="top-strip">SUMMER ’26 | EXCLUSIVE TO RHODE</div>
+  <div class="top-strip">
+    Summer ’26 Collection | Rewards Access
+  </div>
 
   <div class="brand-wrap">
     <div class="brand">rhode</div>
@@ -342,45 +322,61 @@
 
   <main class="container">
 
-    <h1>rhode Discounts + Rewards</h1>
+    <h1>Rhode Summer Collection Rewards</h1>
 
-    <div class="badge">Up to $500</div>
+    <div class="badge">Check available savings</div>
 
     <p class="subtext">
-      Submit a valid email to begin checking your available reward path.
+      Learn how eligible shoppers are accessing Rhode rewards and savings during the Summer ’26 collection launch.
     </p>
 
-    <section class="step">
-      <div class="num">1</div>
+    <section class="info-box">
+      <div class="icon info-icon">i</div>
       <div class="step-text">
-        <h3>Enter a valid email</h3>
-        <p>Submit your email to start and see your available reward path.</p>
+        <h3>Quick note</h3>
+        <p>
+          This is not a regular promo code. You may need to complete 4–6 simple deals to qualify.
+        </p>
       </div>
     </section>
 
     <section class="step">
-      <div class="num">2</div>
+      <div class="icon">1</div>
+      <div class="step-text">
+        <h3>Start with your email</h3>
+        <p>
+          Continue to the next page and submit a valid email to begin checking your available reward path.
+        </p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="icon">2</div>
       <div class="step-text">
         <h3>Complete 4–6 deals</h3>
-        <p>Deals may include surveys, app installs, trial offers, or similar quick steps shown to you.</p>
+        <p>
+          Deals may include surveys, app installs, trial offers, or similar quick steps shown to you.
+        </p>
       </div>
     </section>
 
     <section class="step">
-      <div class="num">3</div>
+      <div class="icon">3</div>
       <div class="step-text">
         <h3>Unlock your reward</h3>
-        <p>Once the steps are completed and verified, your reward instructions will be shown on the offer page.</p>
+        <p>
+          Once your steps are completed and verified, your reward instructions will be shown on the offer page.
+        </p>
       </div>
     </section>
 
     <!-- PUT YOUR AFFILIATE LINK BELOW -->
     <a class="cta" href="https://giftclick.org/aff_c?offer_id=4166&aff_id=170653">
-      Check My rhode Rewards →
+      Check My Rhode Rewards →
     </a>
 
-    <p class="under-cta">
-      Takes less than a minute to start. Completion may vary by path.
+    <p class="fine-print">
+      Takes less than a minute to start. Deal availability may vary.
     </p>
 
     <h2>Frequently Asked Questions</h2>
@@ -395,19 +391,19 @@
     <details>
       <summary>How many deals do I need?</summary>
       <p>
-        You may need to complete 4–6 deals depending on the path shown to you.
+        Most shoppers are shown 4–6 deals depending on the reward path available to them.
       </p>
     </details>
 
     <details>
       <summary>When do I receive the reward?</summary>
       <p>
-        Once the steps are completed and verified, your reward instructions will be shown on the offer page.
+        Once your steps are completed and verified, your reward instructions will be shown based on the offer page.
       </p>
     </details>
 
     <p class="fine-print">
-      Eligibility and completion requirements apply. This page is not affiliated with, endorsed by, or sponsored by rhode.
+      Eligibility and completion terms apply. This page is not affiliated with, endorsed by, or sponsored by Rhode.
     </p>
 
   </main>
