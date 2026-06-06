@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rhode Rewards</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f3f1ec;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      padding: 0 14px 28px;
+    }
+
+    .top-strip {
+      width: calc(100% + 28px);
+      margin-left: -14px;
+      background: #e8e6e0;
+      color: #66645f;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      padding: 12px 14px;
+      border-radius: 0 0 8px 8px;
+      text-transform: uppercase;
+    }
+
+    .brand-wrap {
+      width: calc(100% + 28px);
+      margin-left: -14px;
+      background: #f3f1ec;
+      padding: 24px 0 26px;
+      text-align: center;
+    }
+
+    .brand {
+      font-size: 46px;
+      font-weight: 800;
+      letter-spacing: -3px;
+      line-height: 0.95;
+      color: #62615d;
+      text-transform: lowercase;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 530px;
+      margin: 0 auto;
+      background: #faf8f3;
+      border: 1px solid #d8d4ca;
+      border-radius: 16px;
+      padding: 24px 18px 30px;
+      box-shadow: 0 10px 28px rgba(80, 78, 70, 0.10);
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 28px;
+      line-height: 1.15;
+      text-align: center;
+      margin-bottom: 14px;
+      font-weight: 800;
+      color: #111;
+      white-space: nowrap;
+      letter-spacing: -0.7px;
+    }
+
+    .badge {
+      width: fit-content;
+      margin: 0 auto 18px;
+      background: #6b6861;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 999px;
+      font-size: 21px;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(80, 78, 70, 0.22);
+    }
+
+    .subtext {
+      text-align: center;
+      font-size: 17px;
+      line-height: 1.45;
+      color: #5f5d58;
+      margin-bottom: 24px;
+    }
+
+    .step {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      background: #fffdf8;
+      border: 1px solid #d8d4ca;
+      border-radius: 16px;
+      padding: 22px 20px;
+      margin-bottom: 18px;
+      width: 100%;
+    }
+
+    .num {
+      min-width: 46px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: #62615d;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 900;
+      margin-top: 2px;
+    }
+
+    .step-text {
+      width: 100%;
+    }
+
+    .step h3 {
+      font-size: 25px;
+      margin-bottom: 10px;
+      font-weight: 900;
+      line-height: 1.2;
+      color: #111;
+    }
+
+    .step p {
+      font-size: 20px;
+      line-height: 1.35;
+      color: #5f5d58;
+    }
+
+    .cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #62615d;
+      color: white;
+      text-decoration: none;
+      padding: 24px 14px;
+      border-radius: 14px;
+      font-size: 24px;
+      font-weight: 900;
+      margin: 26px 0 18px;
+      box-shadow: 0 10px 22px rgba(80, 78, 70, 0.20);
+      transition: background-color 0.18s ease, transform 0.18s ease;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    .cta:hover {
+      background: #8b735d;
+      transform: translateY(-1px);
+    }
+
+    .cta:active {
+      background: #8b735d;
+      transform: scale(0.985);
+    }
+
+    .under-cta {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.35;
+      color: #7b7770;
+      margin-bottom: 36px;
+    }
+
+    h2 {
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 22px;
+      font-weight: 900;
+      color: #111;
+    }
+
+    details {
+      background: #fffdf8;
+      border: 1px solid #d8d4ca;
+      border-radius: 16px;
+      padding: 24px 20px;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      font-size: 24px;
+      font-weight: 900;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      line-height: 1.25;
+      color: #111;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      font-size: 32px;
+      font-weight: 900;
+      flex-shrink: 0;
+      color: #62615d;
+    }
+
+    details[open] summary::after {
+      content: "-";
+      color: #8b735d;
+    }
+
+    details p {
+      margin-top: 18px;
+      font-size: 18px;
+      line-height: 1.45;
+      color: #5f5d58;
+    }
+
+    .fine-print {
+      text-align: center;
+      font-size: 17px;
+      color: #7b7770;
+      margin: 28px 0 4px;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 520px) {
+      .brand {
+        font-size: 42px;
+        letter-spacing: -2.7px;
+      }
+
+      h1 {
+        font-size: 22px;
+        letter-spacing: -0.9px;
+        white-space: nowrap;
+      }
+
+      .container {
+        padding: 22px 14px 28px;
+      }
+
+      .badge {
+        font-size: 19px;
+      }
+
+      .step {
+        padding: 20px 16px;
+        gap: 16px;
+      }
+
+      .num {
+        min-width: 42px;
+        width: 42px;
+        height: 42px;
+        font-size: 22px;
+      }
+
+      .step h3 {
+        font-size: 22px;
+      }
+
+      .step p {
+        font-size: 18px;
+      }
+
+      .cta {
+        font-size: 22px;
+        padding: 22px 12px;
+      }
+
+      .under-cta {
+        font-size: 17px;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      summary {
+        font-size: 21px;
+      }
+
+      details p {
+        font-size: 17px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      h1 {
+        font-size: 20px;
+        letter-spacing: -1px;
+      }
+
+      .brand {
+        font-size: 38px;
+      }
+
+      .container {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .step h3 {
+        font-size: 20px;
+      }
+
+      .step p {
+        font-size: 17px;
+      }
+
+      .cta {
+        font-size: 20px;
+      }
+
+      summary {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-strip">SUMMER ’26 | EXCLUSIVE TO RHODE</div>
+
+  <div class="brand-wrap">
+    <div class="brand">rhode</div>
+  </div>
+
+  <main class="container">
+
+    <h1>rhode Discounts + Rewards</h1>
+
+    <div class="badge">Up to $500</div>
+
+    <p class="subtext">
+      Submit a valid email to begin checking your available reward path.
+    </p>
+
+    <section class="step">
+      <div class="num">1</div>
+      <div class="step-text">
+        <h3>Enter a valid email</h3>
+        <p>Submit your email to start and see your available reward path.</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="num">2</div>
+      <div class="step-text">
+        <h3>Complete 4–6 deals</h3>
+        <p>Deals may include surveys, app installs, trial offers, or similar quick steps shown to you.</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="num">3</div>
+      <div class="step-text">
+        <h3>Unlock your reward</h3>
+        <p>Once the steps are completed and verified, your reward instructions will be shown on the offer page.</p>
+      </div>
+    </section>
+
+    <!-- PUT YOUR AFFILIATE LINK BELOW -->
+    <a class="cta" href="https://giftclick.org/aff_c?offer_id=4166&aff_id=170653">
+      Check My rhode Rewards →
+    </a>
+
+    <p class="under-cta">
+      Takes less than a minute to start. Completion may vary by path.
+    </p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>How do I get the reward?</summary>
+      <p>
+        Tap the button above, submit your email, answer the quick questions, and complete the deals shown on the next page.
+      </p>
+    </details>
+
+    <details>
+      <summary>How many deals do I need?</summary>
+      <p>
+        You may need to complete 4–6 deals depending on the path shown to you.
+      </p>
+    </details>
+
+    <details>
+      <summary>When do I receive the reward?</summary>
+      <p>
+        Once the steps are completed and verified, your reward instructions will be shown on the offer page.
+      </p>
+    </details>
+
+    <p class="fine-print">
+      Eligibility and completion requirements apply. This page is not affiliated with, endorsed by, or sponsored by rhode.
+    </p>
+
+  </main>
+
+</body>
+</html>
